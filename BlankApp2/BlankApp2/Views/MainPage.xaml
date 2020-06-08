@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankApp2.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+
+        <Button HorizontalOptions="Start"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    FontSize="32"
+                    BackgroundColor="Transparent"
+                    TextColor="#B2B2B2"
+                    Text="&#xe890;"
+                    Margin="5,5,0,5">
+            <Button.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="fontello" />
+                    <On Platform="Android" Value="Fonts/fontello.ttf#fontello" />
+                    <On Platform="UWP" Value="Assets/Fonts/fontello.ttf#fontello" />
+                </OnPlatform>
+            </Button.FontFamily>
+        </Button>
+    </StackLayout>
+
+</ContentPage>
